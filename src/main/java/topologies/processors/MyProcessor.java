@@ -1,4 +1,4 @@
-package processors;
+package topologies.processors;
 
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.processor.Processor;

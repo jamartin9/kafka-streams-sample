@@ -22,7 +22,6 @@ public class JsonPOJOSerializer<T> implements Serializer<T> {
 
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void configure(Map<String, ?> props, boolean isKey) {
         tClass = (Class<T>) props.get("POJOClass");
@@ -30,9 +29,9 @@ public class JsonPOJOSerializer<T> implements Serializer<T> {
 
     @Override
     public byte[] serialize(String topic, T data) {
-        if (data == null)
+        if (data == null) {
             return null;
-
+        }
         try {
             return objectMapper.writeValueAsBytes(data);
         } catch (Exception e) {

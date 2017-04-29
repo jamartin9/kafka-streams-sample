@@ -7,14 +7,11 @@ import org.apache.kafka.connect.json.JsonSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Utility class for managing serializers. Can be used to minimize instances of repeated serializers
  */
 public class Utility {
-
-    //private static Map<String, Serde<>> derialiezersMap = new ConcurrentHashMap<>();
 
     /**
      *
@@ -33,7 +30,7 @@ public class Utility {
      * @param deserializer deserializer class. must extend kafka deserializer
      * @param serializer serializer class. must extend kafka serializer
      * @param <T> the type to use
-     * @return returns serde conversion of the desiredType for serializers/deserialzers 
+     * @return returns serde conversion of the desiredType for serializers/deserialzers
      * @throws IllegalAccessException
      * @throws InstantiationException
      */
