@@ -24,7 +24,7 @@ public class JsonPOJODeserializer<T> implements Deserializer<T> {
     @Override
     public void configure(Map<String, ?> props, boolean isKey) {
         // get the class name to be deserialized from provided properties
-        tClass = (Class<T>) props.get("JsonPOJOClass");
+        tClass = (Class<T>) props.get("POJOClass");
     }
 
     @Override

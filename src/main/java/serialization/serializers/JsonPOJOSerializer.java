@@ -25,7 +25,7 @@ public class JsonPOJOSerializer<T> implements Serializer<T> {
     @SuppressWarnings("unchecked")
     @Override
     public void configure(Map<String, ?> props, boolean isKey) {
-        tClass = (Class<T>) props.get("JsonPOJOClass");
+        tClass = (Class<T>) props.get("POJOClass");
     }
 
     @Override
